@@ -1,0 +1,45 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pytest
+.pytest_cache/
+
+# virtual environments
+venv/
+.env/
+.venv/
+env/
+
+# macOS
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# build artifacts
+build/
+dist/
+*.egg-info/
+
+# logs
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# coverage
+.coverage
+htmlcov/
+
+# mypy / type checking
+.mypy_cache/
+
+# pyright
+.pyright/
+
+# environment variables
+.env.local
+.env.*
