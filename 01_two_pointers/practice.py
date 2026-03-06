@@ -117,7 +117,7 @@ def max_area(height: list[int]) -> int:
             l += 1
         else:
             r -= 1
-        
+    return maxVal
 
 # ---------------------------------------------------------------------------
 # Problem 4: Trapping Rain Water (LC 42)
