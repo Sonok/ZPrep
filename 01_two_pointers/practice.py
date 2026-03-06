@@ -65,7 +65,32 @@ def two_sum_sorted(numbers: list[int], target: int) -> list[int]:
 #   Output: [[-1, -1, 2], [-1, 0, 1]]
 # ---------------------------------------------------------------------------
 def three_sum(nums: list[int]) -> list[list[int]]:
-    pass  # YOUR CODE HERE
+    nums.sort()
+    out = [] 
+    # we know c = -a-b or easier to think about a+b = -c
+    # so it's almost like for all c we want to find a pair of a,b that add up to -c
+    # this means for every element c we find all pairs using a two pointer solution that 
+    # add up. The nice invariant is that it's sorted so we can find pair sum pretty easily 
+    # using a two pointer approach
+
+    n = len(nums)
+
+    for c in range(2, n):
+        a,b = 0, c-1
+        while(a < b):
+            # we need to make sure neither a or b are c
+            if(nums[a] + nums[b] > -nums[c]):
+                b -= 1
+            elif(nums[a] + nums[b] < -nums[c]):
+                a += 1
+            else:
+                ret = [nums[a], nums[b], nums[c]]
+                ret.sort()
+                out.append(ret)
+                a += 1
+                b -= 1
+    print(out)
+    return out
 
 
 # ---------------------------------------------------------------------------
@@ -80,8 +105,19 @@ def three_sum(nums: list[int]) -> list[list[int]]:
 #   Output: 49
 # ---------------------------------------------------------------------------
 def max_area(height: list[int]) -> int:
-    pass  # YOUR CODE HERE
+    n = len(height)
+    l, r = 0, n-1
+    maxVal = min(height[l], height[r]) * (r - l)
 
+    while(l < r):
+        newMaxVal = min(height[l], height[r]) * (r - l)
+        maxVal = max(maxVal, newMaxVal)
+
+        if(height[l] < height[r]):
+            l += 1
+        else:
+            r -= 1
+        
 
 # ---------------------------------------------------------------------------
 # Problem 4: Trapping Rain Water (LC 42)
