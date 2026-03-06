@@ -36,7 +36,22 @@ AMAZON FAVORITES:
 # Constraints: O(1) extra space
 # ---------------------------------------------------------------------------
 def two_sum_sorted(numbers: list[int], target: int) -> list[int]:
-    pass  # YOUR CODE HERE
+    # since it's already sorted we have a lhs pointer and a rhs pointer
+    # rhs > lhs and that list[rhs] > list[lhs]
+
+    # we move the rhs downward as much as possible. If there's a match - great!
+    # otherwise the lhs index isn't the correct one. So we should increment the lhs pointer
+    # we move the rhs down until it succeeds or we realize the new lhs isn't it so on so forth
+    n = len(numbers)
+    l = 0
+
+    for r in range(n-1, -1, -1): # decreasing python loop from n-1 to -1
+        if numbers[l] + numbers[r] == target:
+            return [l + 1, r + 1]
+        if numbers[l] + numbers[r] < target:
+            l += 1
+    
+    return [-1, -1] # clearly can't happen
 
 
 # ---------------------------------------------------------------------------
