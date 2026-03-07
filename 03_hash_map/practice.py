@@ -23,7 +23,7 @@ AMAZON FAVORITES:
 """
 
 from collections import Counter, defaultdict
-
+import heapq
 
 # ---------------------------------------------------------------------------
 # Problem 1: Two Sum (LC 1) — THE classic Amazon question
@@ -76,6 +76,17 @@ def group_anagrams(strs: list[str]) -> list[list[str]]:
 #   Output: [1, 2]
 # ---------------------------------------------------------------------------
 def top_k_frequent(nums: list[int], k: int) -> list[int]:
+    c = Counter(nums)
+    heap = []
+    out = []
+    for val, count in c.items():
+        heapq.heappush(heap, (-count, val)) # this makes a max heap
+    while(k and heap): # making sure there are k unique elements 
+        out.append(heapq.heappop(heap)[1]) # we append the value
+        k -= 1
+    return out
+
+
     pass  # YOUR CODE HERE
 
 
