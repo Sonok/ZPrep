@@ -130,7 +130,25 @@ def max_area(height: list[int]) -> int:
 #   Output: 6
 # ---------------------------------------------------------------------------
 def trap(height: list[int]) -> int:
-    pass  # YOUR CODE HERE
+    # so when we have a pit we look for it's left and right border.
+    # The height of a column in a pit is minimum of the tallest left wall and right wall
+    vol, n  = 0, len(height)
+    l, r = 0, n-1 # indices of the tallest left wall and tallest right wall 
+    l_height = r_height = 0
+
+    while(l <= r): # really when l+2 <= r
+        print(l, r)
+        if(l_height <= r_height): # the left wall is the limiting factor 
+        # that means at l we add it to volume 
+            vol += max(0, l_height - height[l])
+            l_height = max(l_height, height[l])
+            l += 1
+        else:
+            vol += max(0, r_height - height[r])
+            r_height = max(r_height, height[r])
+            r -= 1
+    print(vol)
+    return  vol
 
 
 # ========================== TEST YOUR SOLUTIONS ==========================
