@@ -37,6 +37,13 @@ from collections import Counter, defaultdict
 #   Output: [0, 1]
 # ---------------------------------------------------------------------------
 def two_sum(nums: list[int], target: int) -> list[int]:
+    s = {}
+    for index, x in enumerate(nums):
+        if target - x in s: # we found the compliment
+            return [index, s[target - x]]
+        s[x] = index
+    return [-1, -1]
+        
     pass  # YOUR CODE HERE
 
 
