@@ -41,7 +41,15 @@ class ListNode:
 #   Output: 5 → 4 → 3 → 2 → 1
 # ---------------------------------------------------------------------------
 def reverse_list(head: ListNode) -> ListNode:
-    pass  # YOUR CODE HERE
+    prev = None
+    curr = head
+    while(curr):
+        temp = curr.next # we should keep eye on the next elemetn so we 
+        # we don't lose it
+        curr.next = prev
+        prev = curr
+        curr = temp 
+    return prev
 
 
 # ---------------------------------------------------------------------------
@@ -52,7 +60,14 @@ def reverse_list(head: ListNode) -> ListNode:
 # A cycle exists if some node's next points back to a previous node.
 # ---------------------------------------------------------------------------
 def has_cycle(head: ListNode) -> bool:
-    pass  # YOUR CODE HERE
+    slow = head
+    fast = head
+    while(fast and fast.next): # so that mean it's finite
+        if(slow == fast):
+            return True
+        slow = slow.next
+        fast = fast.next.next
+    return False
 
 
 # ---------------------------------------------------------------------------
