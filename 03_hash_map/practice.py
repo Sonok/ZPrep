@@ -105,7 +105,24 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 #   Output: 2  (subarrays [1,2] and [3])
 # ---------------------------------------------------------------------------
 def subarray_sum(nums: list[int], k: int) -> int:
-    pass  # YOUR CODE HERE
+    # To first claify. A subarry is a contigious block of values. We want to 
+    # Find all contigious blocks such that their sum is k. 
+    
+    count = 0
+    runningSum = 0 # we keep this. If either runningSum = k
+    # or runningSum - any preceding block = k then we add to our counter
+    dic = defaultdict(int)
+    for val in nums: 
+        runningSum += val
+        if (runningSum == k):
+            count += 1
+
+        if (runningSum - k in dic): # i-j block makes a k sum
+            count += dic[runningSum - k] # the amount of i-j blocks we can make
+
+        dic[runningSum] += 1 # we seen this type of block 
+    
+    return count
 
 
 # ========================== TEST YOUR SOLUTIONS ==========================
