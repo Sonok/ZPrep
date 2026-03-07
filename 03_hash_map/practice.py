@@ -43,8 +43,6 @@ def two_sum(nums: list[int], target: int) -> list[int]:
             return [index, s[target - x]]
         s[x] = index
     return [-1, -1]
-        
-    pass  # YOUR CODE HERE
 
 
 # ---------------------------------------------------------------------------
@@ -58,7 +56,13 @@ def two_sum(nums: list[int], target: int) -> list[int]:
 #   (order doesn't matter)
 # ---------------------------------------------------------------------------
 def group_anagrams(strs: list[str]) -> list[list[str]]:
-    pass  # YOUR CODE HERE
+    dic = defaultdict(list)
+    for string in strs:
+        s = str(sorted(string))
+        dic[s].append(string)
+    
+    return list(dic.values())
+
 
 
 # ---------------------------------------------------------------------------
