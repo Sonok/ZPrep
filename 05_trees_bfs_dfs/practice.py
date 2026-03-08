@@ -52,7 +52,24 @@ class TreeNode:
 #   Output: [[3], [9, 20], [15, 7]]
 # ---------------------------------------------------------------------------
 def level_order(root: TreeNode) -> list[list[int]]:
-    pass  # YOUR CODE HERE
+    q = deque()
+    if not root:
+      return []
+
+    out = []
+    q.append(root)
+    while(q):
+      count = len(q)
+      lst = []
+      for i in range(count):
+        node =  q.popleft()
+        lst.append(node.val)
+        if node.left:
+          q.append(node.left)
+        if node.right:
+          q.append(node.right)
+      out.append(lst)
+    return out
 
 
 # ---------------------------------------------------------------------------
