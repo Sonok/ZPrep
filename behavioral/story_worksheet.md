@@ -49,15 +49,31 @@
 ## Story 2: _Real Analysis _
 
 **LPs covered:**
+- Invent and Simplify
+- Learn and be curious 
+- Insist of high standards
+- Deliver Results
 
 **Situation:**
-- 
+- There was this class I really struggled on called Real Analysis. The point of the class
+- was to go from building up the notion of a number and the defintion of addition subtraction
+- all the way up to defining integral calculus.
 
 **Task:**
+- My goal as in most classes, was to not fail the class. The problem was the amount of defintions
+- and nuainces. 
 
 **Action:**
+- So I dove deep into the world of analysis. Not only did I do the canonical things like do homeworks
+- struggle on problems but if there was a defintion I struggled on I would keep it as my wall screen.
+- I would make sure between sets at the gym I might try to revisit a problem I was looking at casually
+- I remeber struggling with the idea of the fact of countably infinite and uncountably infinite so 
+- I drew examples from things I did understand like the natural numbers or primes or functions. 
 
 **Result:**
+- The end result was not only did pass class but it was my highest grade ever. I archited obession 
+- by really simplifying my challenges and tackling with a problem every waking moment, and it ended
+- up really being my favorite class. 
 
 ---
 
