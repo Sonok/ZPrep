@@ -1,5 +1,5 @@
 # Leetcode questions
-- 19 / 53 done 
+- 20 / 53 done 
 
 # Story's set up
 - 2/8 done

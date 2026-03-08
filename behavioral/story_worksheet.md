@@ -77,17 +77,36 @@
 
 ---
 
-## Story 3: _(title)_
+## Story 3: _Skin Cancer_
 
 **LPs covered:**
+- Bias For Action
+- Invent and Simplify
+- Dive Deep
 
 **Situation:**
+- The way I started my CS journey was a stressful one, in my junior of hs I contracted a very
+- rare form of a skin disease. It really stressed me out bc consistent treatment, balancing school 
+- work and the prospsect of college was really difficult. 
 
 **Task:**
+- I needed to figure out a way to manage the way I felt towards the situaton, so I started reading 
+- articles how people treat and detect skin cancer
 
 **Action:**
+- Through the action of reading about telehealth whether it was detection prognosis, the hours flew by
+- Whether it was learning CNN (Convlution Neural Nets) or time series caluclations for tracking the progress
+- of a condition it was really fun and in the most part relieving. By taking action in some way I felt 
+- in some way I was beating my skin conditon. 
+
+
+- I can also modify this question as a failure thing by explain how appraoching this problem I failed to produce
+- anything "meaningful" like app or new research but the process changed my life competly. 
 
 **Result:**
+- In somewhat of a twisted way, without it I wouldn't be where I am today. Without the conditon and being
+- forced to act somewhat out of necessitiy to simplify my life and try to focus on this "one problem" 
+- I feel like I would have gone crazy otherwise. 
 
 ---
 
