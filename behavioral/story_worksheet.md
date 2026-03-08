@@ -110,17 +110,40 @@
 
 ---
 
-## Story 4: _(title)_
+## Story 4: _Email Translation_
 
 **LPs covered:**
+- Customer Obession
+- Earn Trust 
+- Strive to Be Earth's Best Employer
+- Success and Scale Bring Broad Responsibility
 
 **Situation:**
+- Connecticut, the place I'm from was having a perpetual snow problem. These storms 
+- were causing a lot of problems, esp for one group, people's who's first language was not english.
 
 **Task:**
+- Whether it was annoucnemtn of delays or cancelations, parents who's primary language was not english
+- weren't able to get these communicaitons in time, meaning kids would be sent outside waiting for hours 
+- or sent home early w/o a key, etc.
+- Our job was to fix this. 
 
 **Action:**
+- One of the first things are school district did was set out to find all the cs students they could
+- and try to work on the project. The problem was because of varying levels of skill and an important 
+- project with lots of people and lots of moving parts there was a lot of difficulty communicaitng 
+- and getting through the project. What I did was I started writing articles and tutorials. 
+- I figured, since there was so many moving parts, it was important that each team whether the translation
+- team or the user storage team or the auth team were able to understand and communcate togther.
+- For example for the translate team I would explain what an API is, how we use it, what end points it would use
+- How it fits into the larger project. And fianlly a tutorial showing anyone who was willing a taste of the
+- Work that the rest of that team was working on. 
 
 **Result:**
+- Because of my efforts I really think I made a positive contribution to project. I helped a school district
+- With over 10,000 students make sure that students were getting to and from home safely. The main 
+- stay impact I think I really had was helping others get a clear idea of what was important in the end 
+- of the day, which was helping these kid. 
 
 ---
 
