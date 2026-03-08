@@ -37,7 +37,7 @@
 - As such the people who really liked the movie were giving numbers that were clearly too large. 
 - There was a lot of debate but because of a gut feeling I knew these numbers were incorrect. 
 - Whether it was because I have international friends or my brother is a big film buff, I simply just knew.
-- As such when time was wrapping up, I really had put my fotd down, and I said if we lose you can blame it on 
+- As such when time was wrapping up, I really had put my foot down, and I said if we lose you can blame it on 
 - me, and so I put my guess down, much to the dismay of my teammates. 
 
 **Result:**
@@ -185,3 +185,4 @@ After filling in your stories, check that you have at least one story for each p
 - Have a **failure story** ready (shows growth mindset)
 - Re-read the LP definitions before your interview
 - At the end they'll ask "Do you have questions?" — **ALWAYS have 2-3 ready**
+
