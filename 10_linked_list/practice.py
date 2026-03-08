@@ -60,8 +60,11 @@ def reverse_list(head: ListNode) -> ListNode:
 # A cycle exists if some node's next points back to a previous node.
 # ---------------------------------------------------------------------------
 def has_cycle(head: ListNode) -> bool:
+    if not head:
+        return False
+
     slow = head
-    fast = head
+    fast = head.next
     while(fast and fast.next): # so that mean it's finite
         if(slow == fast):
             return True
@@ -80,7 +83,24 @@ def has_cycle(head: ListNode) -> bool:
 #   Output: 1 → 1 → 2 → 3 → 4 → 4
 # ---------------------------------------------------------------------------
 def merge_two_lists(list1: ListNode, list2: ListNode) -> ListNode:
-    pass  # YOUR CODE HERE
+    sentinal = ListNode()
+    start = sentinal
+    while(list1 and list2):
+        if (list1.val < list2.val):
+            sentinal.next = ListNode(list1.val)
+            list1 = list1.next
+        else:
+            sentinal.next = ListNode(list2.val)
+            list2 = list2.next
+        sentinal = sentinal.next
+    
+    # append the left over 
+    if list1:
+        sentinal.next = list1
+    else:
+        sentinal.next = list2
+
+    return start.next
 
 
 # ---------------------------------------------------------------------------
