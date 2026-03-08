@@ -17,25 +17,41 @@
 
 ---
 
-## Story 1: _(title)_
+## Story 1: _(Jane Street Esthimaton)_
 
 **LPs covered:**
+-  Ownership
+-  Are Right, A Lot
+-  Have Backbone; Disagree and Commit
+-  Bias For Action 
 
 **Situation:**
+- I was competing in a competiton hosted by Jane Street, that focuses on fermi questions.
 
 **Task:**
+- The question we got was what was the domestic box score of Interstellar. Our goal was to give an interval
+- and we were scored by how right and how tight our interval was. We encountered a challenged,
+- my group really liked the movie.
 
 **Action:**
+- As such the people who really liked the movie were giving numbers that were clearly too large. 
+- There was a lot of debate but because of a gut feeling I knew these numbers were incorrect. 
+- Whether it was because I have international friends or my brother is a big film buff, I simply just knew.
+- As such when time was wrapping up, I really had put my fotd down, and I said if we lose you can blame it on 
+- me, and so I put my guess down, much to the dismay of my teammates. 
 
 **Result:**
+- The result was that one guess propeled us to the top. Out of 13 problems we had 11 correct intervals
+- which led us to win 3rd in the whole comeptiton. 
 
 ---
 
-## Story 2: _(title)_
+## Story 2: _Real Analysis _
 
 **LPs covered:**
 
 **Situation:**
+- 
 
 **Task:**
 
