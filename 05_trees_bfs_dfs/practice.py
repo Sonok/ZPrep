@@ -90,7 +90,17 @@ def level_order(root: TreeNode) -> list[list[int]]:
 #       3   6  → False (3 < 5 but is in right subtree)
 # ---------------------------------------------------------------------------
 def is_valid_bst(root: TreeNode) -> bool:
-    pass  # YOUR CODE HERE
+    # we can run a inorder traversal. We see if that is in order then it's correct
+    def inorder(node):
+      if not node:
+        return []
+      return inorder(node.left) + [node] + inorder(node.right)
+    
+    lstInorder = inorder(root)
+    for i in range(len(lstInorder) - 1):
+      if lstInorder[i].val >= lstInorder[i+1].val:
+        return False
+    return True
 
 
 # ---------------------------------------------------------------------------
