@@ -30,7 +30,7 @@ AMAZON FAVORITES:
   - Word Break
 =============================================================================
 """
-
+from functools import cache
 
 # ---------------------------------------------------------------------------
 # Problem 1: Climbing Stairs (LC 70)
@@ -95,7 +95,18 @@ def coin_change(coins: list[int], amount: int) -> int:
 #   Output: 3  ("ace")
 # ---------------------------------------------------------------------------
 def longest_common_subsequence(text1: str, text2: str) -> int:
-    pass  # YOUR CODE HERE
+
+    @cache
+    def dp(i, j):
+        if (i < 0 or j < 0) : # no way to have a common substring
+            return 0
+        if (text1[i] == text2[j]):
+            return 1 + dp(i-1, j-1)
+        
+        return max(dp(i-1, j), dp(i, j-1))
+
+    n, m = len(text1), len(text2) 
+    return dp(n-1, m-1)
 
 
 # ---------------------------------------------------------------------------
