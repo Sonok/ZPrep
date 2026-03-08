@@ -43,7 +43,20 @@ AMAZON FAVORITES:
 #   Output: 3  (1+1+1, 1+2, 2+1)
 # ---------------------------------------------------------------------------
 def climb_stairs(n: int) -> int:
-    pass  # YOUR CODE HERE
+    # this is given by states
+    # where state[n] = state[n-1] + state[n-2]
+    # we want to know what state[n] is 
+    # so state[1] = 1 state[2] = 2
+    if (n == 1 or n == 2):
+        return n
+
+    states = [0] * (n+1)
+    states[1], states[2] = 1, 2
+
+    for i in range(3, n+1):
+        states[i] = states[i-1] + states[i-2]
+
+    return states[-1]
 
 
 # ---------------------------------------------------------------------------
