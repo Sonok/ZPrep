@@ -58,14 +58,31 @@ def find_kth_largest(nums: list[int], k: int) -> int:
 #
 # Use the ListNode class below.
 # ---------------------------------------------------------------------------
-class ListNode:
-    def __init__(self, val=0, next=None):
+class ListNode: # very important to remever __init__ contains self 
+# all attribtuoes go with self.
+    def __init__(self, val=0,next=None):
         self.val = val
         self.next = next
 
 
 def merge_k_lists(lists: list[ListNode]) -> ListNode:
-    pass  # YOUR CODE HERE
+    # we should first make an auxillary nodes
+    n = ListNode() # default is val = 0 and next is none 
+    head = n # place holder
+
+    heap = []
+    for i, ll in enumerate(lists):
+        if ll: # make sure non empty linked list 
+            heapq.heappush(heap, (ll.val, i))
+    
+    while heap:
+        value, i = heapq.heappop(heap) # pair 
+        n.next = ListNode(value) # we need to make a copy
+        lists[i] = lists[i].next # we process the element 
+        if lists[i]:
+            heapq.heappush(heap, (lists[i].val, i)) # push it back into the comparison
+        n = n.next
+    return head.next
 
 
 # ---------------------------------------------------------------------------
