@@ -70,7 +70,18 @@ def climb_stairs(n: int) -> int:
 #   Output: 3  (5+5+5)
 # ---------------------------------------------------------------------------
 def coin_change(coins: list[int], amount: int) -> int:
-    pass  # YOUR CODE HERE
+    states = [float('inf')] * (amount + 1)
+    states[0] = 0
+
+    for i in range(0, amount + 1):
+        if states[i] != float('inf'): # means that possible to get to that dollar amount
+            for coin in coins:
+                if i + coin <= amount: # see if in range
+                    states[i + coin] = min(states[i] + 1, states[i + coin]) 
+                    # checking if there's alr a better consturction 
+    if states[-1] == float('inf'):
+         return -1
+    return states[-1]
 
 
 # ---------------------------------------------------------------------------
