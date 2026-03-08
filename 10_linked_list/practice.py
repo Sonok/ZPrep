@@ -113,7 +113,28 @@ def merge_two_lists(list1: ListNode, list2: ListNode) -> ListNode:
 #   Output: 1 → 2 → 3 → 5
 # ---------------------------------------------------------------------------
 def remove_nth_from_end(head: ListNode, n: int) -> ListNode:
-    pass  # YOUR CODE HERE
+    count = 0
+    curr = head
+    while(curr):
+        count += 1
+        curr = curr.next
+
+    if count < n:
+        return head # do nothing 
+    
+    if count == n:
+        return head.next # destory the head value 
+    
+    index = count - n 
+    # remove node at index. This is a 0 index term
+    prev = None # this is following curr one step behidn
+    curr = head
+
+    for _ in range(index):
+        prev = curr
+        curr = curr.next
+    prev.next = curr.next 
+    return head
 
 
 # ========================== TEST YOUR SOLUTIONS ==========================
