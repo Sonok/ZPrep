@@ -47,6 +47,30 @@ import math
 #   Output: 4
 # ---------------------------------------------------------------------------
 def search_rotated(nums: list[int], target: int) -> int:
+    n = len(nums)
+    lo, hi = 0, n-1
+
+    while(lo <= hi): # tbd if it's lo < hi or this is correct
+        mid = (lo + hi) // 2
+        if nums[mid] == target:
+            return mid
+
+        if nums[lo] < nums[mid]: # lhs is sorted
+            if nums[mid] > target >= nums[lo]:
+                hi = mid - 1 #check the interval for lo to mid 
+            else:
+                lo = mid + 1 # the target is in the lhs sorted part
+         
+        else: # rhs is sorted so nums[mid] < nums[hi]
+            if (nums[hi] >= target > nums[mid]):
+               lo = mid + 1
+            else:
+                hi = mid - 1
+    return -1 
+        
+            
+
+        
     pass  # YOUR CODE HERE
 
 
