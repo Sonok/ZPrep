@@ -100,7 +100,21 @@ def search_range(nums: list[int], target: int) -> list[int]:
 #   target = 3 → True
 # ---------------------------------------------------------------------------
 def search_matrix(matrix: list[list[int]], target: int) -> bool:
-    pass  # YOUR CODE HERE
+    m, n =  len(matrix), len(matrix[0])
+    lo,hi = 0,m * n - 1
+    while(lo <= hi):
+        mid = (lo + hi) // 2
+        value = matrix[mid // n][mid % n]
+        if value == target:
+            return True
+        elif value < target: # rhs interval
+            lo = mid + 1
+        else:
+            hi = mid - 1
+    return False
+
+        
+
 
 
 # ---------------------------------------------------------------------------
