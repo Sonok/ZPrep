@@ -37,6 +37,17 @@ from collections import Counter, defaultdict
 #   Output: 3  (the answer is "abc")
 # ---------------------------------------------------------------------------
 def length_of_longest_substring(s: str) -> int:
+    n, window, maxLen = len(s), set(), 0 # IMPORTANT VARIABLES
+    i = 0 # we keep a window from indicies i to j
+    for j in range(n):
+        while s[j] in window:
+            window.remove(s[i])
+            i += 1
+        window.add(s[j])
+        maxLen = max(maxLen, len(window))
+    return maxLen
+
+
     pass  # YOUR CODE HERE
 
 
@@ -46,11 +57,14 @@ def length_of_longest_substring(s: str) -> int:
 # Given strings s and t, return the minimum window substring of s that
 # contains all characters of t (including duplicates). Return "" if none.
 #
-# Example:
+# Example: 
 #   Input:  s = "ADOBECODEBANC", t = "ABC"
 #   Output: "BANC"
 # ---------------------------------------------------------------------------
 def min_window(s: str, t: str) -> str:
+    remain = Counter(t)
+    # min Len varaible 
+    for 
     pass  # YOUR CODE HERE
 
 
