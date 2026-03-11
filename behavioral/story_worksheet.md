@@ -150,6 +150,11 @@
 
 **LPs covered:**
 
+- Ownership 
+- Deliver Results 
+- Bias for action 
+- Insist on High standards 
+
 **Situation:**
 
 - I worked in a startup called Probanker. Probanker is a simulation software that allows students
@@ -177,17 +182,35 @@
 - but my organziation in general. 
 ---
 
-## Story 6: _(title)_
+## Story 6: _Putnam_ 
 
-**LPs covered:**
+**LPs covered (Not really an LP smasher but a failure story just incase):**
+- Ownership
+- Learn and be curious 
+- Invent and simplify 
+- Dive deep 
 
 **Situation:**
+- Along with being a cs major I'm also an avid math competitor. The main competition for college students is 
+- Lowell Putnam exam. This is known as the hardest exam in the world.
 
 **Task:**
+- With an average score of 1/120 and a 
+- score of 20 make u a top 500 competior in the world this exam is very important to me. 
 
 **Action:**
+- I want to reach top 500, and so I thought the most important thing was practice through volume. I studied
+- 2 hours everyday. I did as many problems as I could, I watched youtube videos, I read blogs, I worked through
+- solutions, but I failed. With all the questions I did the more memorzing of solutions and tricks I did. The novelty of 
+- doing new problems and being to understand them easier was making me feel like I was makign progress, when I really wasn't
+- It was really disheartning but it taught me a really valuable lesson. 
 
 **Result:**
+- I learned to approach problems as more so an experience
+- I learned to approach problems as a mental journey of where I would use my math as a tool rather than a veichle to solve
+- Really intresting and frankly beautiful problems. Because of this realization I don't spend as much time on problems. 
+- By allowing intution and deep thought as my veichle I think really helped me get my top 700 finish on the putnam. and 
+- I hope to do even better in the future.  
 
 ---
 
