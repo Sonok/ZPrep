@@ -62,9 +62,41 @@ def length_of_longest_substring(s: str) -> int:
 #   Output: "BANC"
 # ---------------------------------------------------------------------------
 def min_window(s: str, t: str) -> str:
-    remain = Counter(t)
+    l, n = 0, len(s)
+    tCounter = Counter(t)
+    currWindow = defaultdict(int)
+    startIndex = l
+    minWindow = float('inf')
     # min Len varaible 
-    for 
+    for r in range(n):
+        currWindow[s[r]] += 1
+        isValid = True
+        if(r - l + 1 < len(t)):
+            isValid = False
+        else:
+            for key, val in tCounter.items(): 
+                if val > currWindow[key]: # all element right amount 
+                    isValid  = False # so we ssee if contains all characters
+                    break  
+        
+        while isValid: # shrink the window
+            if minWindow > r - l + 1:
+                startIndex = l
+                minWindow = r - l + 1
+
+            if(r - l + 1 < len(t)):
+                isValid = False
+            currWindow[s[l]] -= 1 # roll back lhs window
+
+            if currWindow[s[l]] < tCounter[s[l]]:
+                isValid = False
+            
+            l += 1
+    if minWindow == float('inf'):
+        return ""
+    return s[startIndex:startIndex+minWindow]
+        
+
     pass  # YOUR CODE HERE
 
 
