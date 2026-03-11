@@ -2,7 +2,7 @@
 - 20 / 53 done 
 
 # Story's set up
-- 2/8 done
+- 4/8 done
 
 # Practice Questions
 - 0/20 This is easy. 

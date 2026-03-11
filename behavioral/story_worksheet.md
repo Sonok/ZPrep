@@ -82,7 +82,6 @@
 **LPs covered:**
 - Bias For Action
 - Invent and Simplify
-- Dive Deep
 
 **Situation:**
 - The way I started my CS journey was a stressful one, in my junior of hs I contracted a very
@@ -147,18 +146,35 @@
 
 ---
 
-## Story 5: _(title)_
+## Story 5: _Probanker_
 
 **LPs covered:**
 
 **Situation:**
 
+- I worked in a startup called Probanker. Probanker is a simulation software that allows students
+- corporate clients etc. to act as bank managers to make decesion like liquidity choices, intrest rate
+- federal fund rates to simulate outcomes.
+
 **Task:**
+-  Being a small org I had a lot of work to do espically regarding the database architure 
+-  that would fail or tweak during product. 
 
 **Action:**
 
-**Result:**
+- I was given a lot of agency to do what needed to be done. However with 10k+ lines for each differnt 
+- component, as well as messy uninterpebile wiring from the .so files to the django backend and to the 
+- angular frontend I was really struggling to fixing any tiny bug. So what I did with my high degree of freedom
+- was I chose to rewrite the DDL files. I kept all the data in some S3 instances and then I got to work using 
+- a lot of resuable compoentns with the help of AI to make templates that would not make the code I wrote 
+- more interprible now but also allow to make differnt simulation components as well as clearly decoupling 
+- from the largely monlithic archeiture that was there before. 
 
+**Result:**
+- Because of my results not only was I able to fix all issues regarding querying and simulations. I allowed the 
+- organization to now my simulation run times faster by as much as 40-60%. I think because of my high level 
+- of agency and not adding to what was a terribly written code base, I really not only helped my comphresion 
+- but my organziation in general. 
 ---
 
 ## Story 6: _(title)_
