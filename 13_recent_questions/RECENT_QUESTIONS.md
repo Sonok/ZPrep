@@ -72,6 +72,27 @@ There is now reportedly a **dedicated Gen AI round** appearing in some SDE 1 int
 | What are the risks of using AI-generated code in production? | SDE interviews |
 | How would you use Amazon Q or Bedrock to solve [X problem]? | Amazon-specific |
 
+## Q1 How do you use generative AI?
+I primarily use generative AI as a productivity and learning tool rather than something that replaces my problem solving. For example, when I’m working on a project, I might use it to help generate documentation or clarify how to structure a function or class. If I’ve written some code, I’ll sometimes ask AI to help draft a docstring explaining the parameters, return values, and overall purpose so the code is easier for others to understand.
+
+I also use it when I’m learning new concepts. If I’m studying an algorithm or system design idea, I might ask AI to explain it with examples or walk through a small case so I can verify my understanding.
+
+For debugging, I sometimes paste an error message or snippet of code and ask for possible causes, but I still step through the logic myself and verify any suggestion before applying it.
+
+Overall, I think of generative AI as a tool that helps me move faster on tasks like documentation, learning, and debugging, while I remain responsible for the correctness and design of the code.
+
+## Q2 How have u used AI tools
+I’ve used generative AI tools primarily to accelerate development and help with experimentation in my personal projects. For example, in a project I built called an event discovery engine, I created a pipeline that ingests events from the Eventbrite API and ranks them based on similarity to a user’s preferences. I used AI tools while building parts of the system such as the embedding pipeline and ranking logic. For instance, when integrating sentence-transformer embeddings and cosine similarity scoring, I used AI tools to quickly explore implementation approaches and generate initial code snippets for vector processing.
+
+I also used AI to help draft documentation and clarify architecture decisions while building the ETL pipeline that fetches events, generates embeddings, and stores them in a database for querying. For example, when designing the ranking system that compares user personality vectors with event vectors, I used AI tools to validate the cosine similarity approach and understand best practices for working with embeddings.
+
+I treat AI outputs as suggestions rather than final answers. I still review the code, test it, and make sure I understand the underlying logic before integrating it into my project. Overall, AI has been most helpful for speeding up research, debugging issues, and documenting systems, while I remain responsible for the final implementation and correctness.
+
+## Q3 What are the risks of using AI-generated code in production?
+Large Language Models (LLMs) are neural networks trained on massive amounts of text to predict the next word (or token) in a sequence. By learning patterns in language during training, they can generate coherent text, answer questions, and assist with tasks by continuing text in a way that is statistically likely given the context. For problems that are unique 
+and not standard whcih are the most important ones it can descern it decesion making and will alway use it's general context
+then use metathinking or problem solving 
+
 ### How to Prep
 
 - Have a real, specific example of using AI tools in your workflow
@@ -87,20 +108,35 @@ There is now reportedly a **dedicated Gen AI round** appearing in some SDE 1 int
 | Question |
 |----------|
 | Tell me about a time you took on a project outside your normal responsibilities |
+
+- talk about research
+
 | Tell me about a time you saw a problem and fixed it without being asked |
+
+- talk about probanker
 
 ### Bias for Action
 | Question |
 |----------|
 | Tell me about a time you had to make a decision without having all the information you needed |
+
+- talk about skin 
+
 | Describe a time you had to choose between moving forward vs. waiting to finish something perfectly |
+
+- State street
+
 | *Behavioral questions on decision-making and deadlines — specifically around what you do when a deadline is at risk* |
 
 ### Deliver Results
 | Question |
 |----------|
 | Tell me about a time you failed to meet a deadline. What happened and what did you do? |
+- you could talk about research and shift to be like I was late to one journal but I made
+- sure to give it my all for another 
+
 | Give an example of when you set a goal and had to overcome obstacles to achieve it |
+- This is def putnam 
 
 ### Customer Obsession
 | Question |
@@ -108,21 +144,35 @@ There is now reportedly a **dedicated Gen AI round** appearing in some SDE 1 int
 | Tell me about a time you went out of your way for a user/customer/teammate |
 | Describe a project where you had to understand your end user deeply |
 
+- talk about email translation 
+
 ### Learn and Be Curious (maps directly to GenAI questions)
 | Question |
 |----------|
 | What's a new technology or tool you've recently taught yourself? How did you apply it? |
 | How do you stay current with changes in the industry? *(GenAI use is a perfect answer here)* |
 
+- I try to stay current by regularly reading technical articles from engineering blogs and platforms like Medium, where engineers often share explanations of new techniques and systems. I’m particularly interested in how machine learning and data analysis are used in financial and market systems. For example, I recently read articles discussing market manipulation techniques like spoofing in prediction markets, where participants place misleading orders to influence perceived demand.
+
+That led me to explore how these behaviors could be detected or modeled using data analysis and machine learning approaches. I experimented with small prototypes to see how patterns in order flow might reveal suspicious behavior. Reading those articles helps me discover new ideas, and trying to implement simplified versions helps me understand the concepts more deeply.
+
+- OpenMP and MPI. Recently I worked on an earthquake simulation project on Zartan, my university’s high-performance computing cluster. The simulation models how seismic waves propagate through the earth, which involves very large numerical computations on grid-based data. To speed up the simulation, I used OpenMP to parallelize the compute-heavy loops so the workload could be distributed across many threads.
+
+Because Zartan uses modern NVIDIA GPUs, we were able to run these parallel workloads on GPU hardware designed for massive parallelism. That allowed thousands of threads to process parts of the simulation simultaneously, which significantly improved performance compared to running the code on a single CPU core. Working on this helped me better understand how parallel programming and GPU acceleration can be used to solve large-scale scientific computing problems.
+
 ### Earn Trust / Disagree and Commit
 | Question |
 |----------|
 | Tell me about a time you disagreed with a teammate or manager. How did you handle it? |
 
+- esthimaton 
+
 ### Dive Deep
 | Question |
 |----------|
 | Walk me through a complex technical problem you solved. How did you debug it step by step? |
+
+- analysis bang!
 
 ---
 
