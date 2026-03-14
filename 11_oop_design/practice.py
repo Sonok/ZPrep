@@ -71,52 +71,94 @@ class SpotSize(Enum):
 class Vehicle:
     """Represents a vehicle entering the lot."""
     def __init__(self, license_plate: str, size: VehicleSize):
-        pass  # YOUR CODE HERE
+        self.license_plate = license_plate
+        self.size = size
+    
+    def __repr__(self):
+        return f"Veichle{self.license_plate}, {self.size}"
 
 
 class ParkingSpot:
     """A single parking spot on a floor."""
     def __init__(self, spot_id: int, size: SpotSize):
-        pass  # YOUR CODE HERE
+        self.spot_id = spot_id
+        self.size = size
+        self.vehicle = None # there's no vehichle initalized 
 
     def can_fit(self, vehicle: Vehicle) -> bool:
         """Return True if this spot can fit the given vehicle."""
-        pass  # YOUR CODE HERE
+        return self.vehicle is None and vehicle.size <= self.size
 
     def park(self, vehicle: Vehicle) -> None:
-        pass  # YOUR CODE HERE
-
+        if self.can_fit(vehicle):
+            self.vehicle = vehicle
+        else:
+            raise ValueError(f"Vehicle {vehicle} cannot fit in spot {self.spot_id}")
+        
     def remove(self) -> None:
-        pass  # YOUR CODE HERE
-
+        self.vehicle = None
 
 class ParkingFloor:
     """A single floor with a collection of spots."""
     def __init__(self, floor_number: int, small: int, medium: int, large: int):
         """Create a floor with the given number of each spot size."""
-        pass  # YOUR CODE HERE
+        self.floor_number = floor_number
+        self.floor = []
+        id = 0 # 0 index spot
+        for _ in range(small):
+            self.floor.append(ParkingSpot(id, SpotSize.SMALL)) 
+            id += 1
+        for _ in range(medium):
+            self.floor.append(ParkingSpot(id, SpotSize.MEDIUM)) 
+            id += 1
+        for _ in range(large):
+            self.floor.append(ParkingSpot(id, SpotSize.LARGE)) 
+            id += 1
+        
+
 
     def park_vehicle(self, vehicle: Vehicle) -> "ParkingSpot | None":
         """Find the smallest available spot that fits the vehicle."""
-        pass  # YOUR CODE HERE
+        for spot in self.floor:
+            if spot.can_fit(vehicle):
+                spot.park(vehicle)
+                return spot
+        return None # none found 
+        
+
 
     def available_spots(self) -> dict[str, int]:
         """Return a count of available spots by size."""
-        pass  # YOUR CODE HERE
+        dic = {VehicleSize.SMALL: 0, VehicleSize.MEDIUM: 0, VehicleSize.LARGE: 0}
+        for spot in self.floor:
+            if not spot.vehicle:
+                dic[spot.size] += 1
+        return dic
 
 
 class ParkingLot:
     """The top-level parking lot containing multiple floors."""
     def __init__(self, floors: list[ParkingFloor]):
-        pass  # YOUR CODE HERE
+        self.floors = floors
+        self.tickets = dict[str, tuple[ParkingFloor, ParkingSpot]]
 
     def park_vehicle(self, vehicle: Vehicle) -> str | None:
         """Park a vehicle and return a ticket string, or None if full."""
-        pass  # YOUR CODE HERE
+        for floor in self.floors:
+            park =  floor.park_vehicle(vehicle)
+            if park:
+                ticket = f"{floor.floor_number}-{park.spot_id}"
+                self.tickets[ticket] = (floor.floor_number , park.spot_id)
+                return ticket
+        return None
+
 
     def remove_vehicle(self, ticket: str) -> Vehicle | None:
         """Remove and return the vehicle for the given ticket."""
-        pass  # YOUR CODE HERE
+        if ticket not in self.tickets:
+            return None
+        floor, spot = self.tickets.pop(ticket)
+        return spot.remove()
 
 
 # ---------------------------------------------------------------------------

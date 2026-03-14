@@ -122,7 +122,42 @@ def is_valid_bst(root: TreeNode) -> bool:
 #   p=5, q=4 → LCA = 5
 # ---------------------------------------------------------------------------
 def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
-    pass  # YOUR CODE HERE
+    # we can do a root to node path. Dictionary for every value we do key -> parent
+    dic = {}
+    dic[root] = root # since root has no parent
+    stack = [root] # let's just process all the elements
+
+    while(stack):
+        node = stack.pop() 
+        if node.right:
+          stack.append(node.right)
+          dic[node.right] = node
+        if node.left:
+          stack.append(node.left) 
+          dic[node.left] = node
+    
+    pathP = []
+    node = p 
+    while(node != dic[node]): # so we're going all the way to the root
+      pathP.append(node)
+      node = dic[node]
+    pathP.append(root)
+
+    pathQ = []
+    node = q 
+    while(node != dic[node]): # so we're going all the way to the root
+      pathQ.append(node)
+      node = dic[node]
+    pathQ.append(root)
+    print(len(pathQ))
+    lca = root
+    for i in range(1, min(len(pathP), len(pathQ))):
+        if(pathQ[-i] == pathP[-i]):
+          lca = pathQ[-i] 
+        else:
+          break # we are done no LCA 
+    print(lca.val)
+    return lca
 
 
 # ---------------------------------------------------------------------------
