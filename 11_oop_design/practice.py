@@ -129,7 +129,7 @@ class ParkingFloor:
 
     def available_spots(self) -> dict[str, int]:
         """Return a count of available spots by size."""
-        dic = {VehicleSize.SMALL: 0, VehicleSize.MEDIUM: 0, VehicleSize.LARGE: 0}
+        dic = {SpotSize.SMALL: 0, SpotSize.MEDIUM: 0, SpotSize.LARGE: 0}
         for spot in self.floor:
             if not spot.vehicle:
                 dic[spot.size] += 1
@@ -204,11 +204,12 @@ class Rank(Enum):
 class Card:
     """A single playing card."""
     def __init__(self, suit: Suit, rank: Rank):
-        pass  # YOUR CODE HERE
+        self.suit = suit
+        self.rank = rank
 
     def __repr__(self) -> str:
         """Return e.g. 'ACE of SPADES'"""
-        pass  # YOUR CODE HERE
+        return f"{self.suit} of {self.rank}"
 
 
 class Deck:
